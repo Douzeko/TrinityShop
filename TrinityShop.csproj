@@ -4,6 +4,7 @@
         <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>0217b129-b8fd-4124-a9fe-d03a2efe604b</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>
@@ -16,9 +17,36 @@
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
+        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
         <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
         <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.2" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Controllers\Clients\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="TrinityShopTest\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="TrinityShopTest\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="TrinityShopTest\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="TrinityShopTest\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="TrinityShopTest\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="TrinityShopTest\obj\project.packagespec.json" />
+      <_ContentIncludedByDefault Remove="TrinityShopTest\obj\TrinityShopTest.csproj.nuget.dgspec.json" />
     </ItemGroup>
 
 </Project>
